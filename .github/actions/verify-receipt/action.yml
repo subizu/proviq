@@ -1,0 +1,46 @@
+name: "Agent-Proof Verifier"
+description: "Verifies cryptographic receipts for AI agent actions"
+inputs:
+  receipt-file:
+    description: "Path to the receipt JSON file to verify"
+    required: false
+    default: "receipt.json"
+  receipts-dir:
+    description: "Directory containing commit receipts"
+    required: false
+    default: ".agent-proof/receipts"
+  public-key:
+    description: "Path to expected public key (PEM)"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.23'
+
+    - name: Install agent-proof
+      shell: bash
+      run: go install github.com/agent-proof/agent-proof/cmd/agent-proof@latest
+
+    - name: Verify Receipt
+      shell: bash
+      run: |
+        if [ -f "${{ inputs.receipt-file }}" ]; then
+          KEY_FLAG=""
+          if [ -n "${{ inputs.public-key }}" ]; then
+            KEY_FLAG="--public-key ${{ inputs.public-key }}"
+          fi
+          agent-proof verify "${{ inputs.receipt-file }}" $KEY_FLAG
+        elif [ -d "${{ inputs.receipts-dir }}" ]; then
+          for f in ${{ inputs.receipts-dir }}/*.json; do
+            [ -e "$f" ] || continue
+            echo "Verifying $f..."
+            agent-proof verify "$f"
+          done
+        else
+          echo "No receipt file or receipts directory found."
+          exit 1
+        fi
