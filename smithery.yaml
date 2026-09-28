@@ -1,0 +1,16 @@
+name: agent-proof
+displayName: Agent-Proof Provenance MCP
+description: Tamper-evident cryptographic receipt generator and verifier for AI coding agents
+repository: https://github.com/subizu/proviq
+homepage: https://github.com/subizu/proviq
+license: Apache-2.0
+command: agent-proof
+args:
+  - mcp
+tools:
+  - name: record_agent_action
+    description: Creates a signed, tamper-evident cryptographic receipt for an agent action
+  - name: verify_receipt
+    description: Verifies the cryptographic signature, hashes, and integrity of a receipt
+  - name: generate_key_pair
+    description: Generates a new Ed25519 key pair for agent signing

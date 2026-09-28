@@ -22,12 +22,19 @@ agent-proof verify receipt.json
 
 ### 1. Installation
 
+**macOS & Linux (1-line script):**
+```bash
+curl -fsSL https://raw.githubusercontent.com/subizu/proviq/main/install.sh | bash
+```
+
+**Windows (PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/subizu/proviq/main/install.ps1 | iex
+```
+
+**Via Go:**
 ```bash
 go install github.com/subizu/proviq/cmd/agent-proof@latest
-```
-*Or build from source:*
-```bash
-go build -o bin/agent-proof ./cmd/agent-proof
 ```
 
 ---
