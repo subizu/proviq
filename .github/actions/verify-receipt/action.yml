@@ -23,7 +23,7 @@ runs:
 
     - name: Install agent-proof
       shell: bash
-      run: go install github.com/agent-proof/agent-proof/cmd/agent-proof@latest
+      run: go install github.com/subizu/proviq/cmd/agent-proof@latest
 
     - name: Verify Receipt
       shell: bash

@@ -1,4 +1,4 @@
-module github.com/agent-proof/agent-proof
+module github.com/subizu/proviq
 
 go 1.23.4
 

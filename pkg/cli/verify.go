@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/agent-proof/agent-proof/pkg/crypto"
-		"github.com/agent-proof/agent-proof/pkg/receipt"
+	"github.com/subizu/proviq/pkg/crypto"
+	"github.com/subizu/proviq/pkg/receipt"
 	"github.com/spf13/cobra"
 )
 

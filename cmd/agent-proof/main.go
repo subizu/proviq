@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/agent-proof/agent-proof/pkg/cli"
+	"github.com/subizu/proviq/pkg/cli"
 )
 
 func main() {

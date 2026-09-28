@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/agent-proof/agent-proof/pkg/crypto"
-	"github.com/agent-proof/agent-proof/pkg/git"
-	"github.com/agent-proof/agent-proof/pkg/receipt"
+	"github.com/subizu/proviq/pkg/crypto"
+	"github.com/subizu/proviq/pkg/git"
+	"github.com/subizu/proviq/pkg/receipt"
 )
 
 // JSONRPCRequest represents a JSON-RPC 2.0 request or notification.

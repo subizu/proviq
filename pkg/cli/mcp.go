@@ -3,7 +3,7 @@ package cli
 import (
 	"os"
 
-	"github.com/agent-proof/agent-proof/pkg/mcp"
+	"github.com/subizu/proviq/pkg/mcp"
 	"github.com/spf13/cobra"
 )
 

@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/agent-proof/agent-proof/pkg/receipt"
+	"github.com/subizu/proviq/pkg/receipt"
 )
 
 // PublicKey is an Ed25519 public key.

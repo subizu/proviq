@@ -23,7 +23,7 @@ agent-proof verify receipt.json
 ### 1. Installation
 
 ```bash
-go install github.com/agent-proof/agent-proof/cmd/agent-proof@latest
+go install github.com/subizu/proviq/cmd/agent-proof@latest
 ```
 *Or build from source:*
 ```bash

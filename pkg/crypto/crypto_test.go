@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/agent-proof/agent-proof/pkg/receipt"
+	"github.com/subizu/proviq/pkg/receipt"
 )
 
 func TestGenerateAndSignVerify(t *testing.T) {
